@@ -11,7 +11,17 @@ body {
     background: url("../images/bgnoise_lg/bgnoise_lg/bgnoise_lg.png");
 }
 
-h1 {
+.container {
+    clear: both;
+    width: 960px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    color: #666666;
+    border: 1px solid #cccccc;
+}
+
+.head-container h1 {
     padding: 30px;
     float: left;
 }
@@ -63,16 +73,26 @@ p:last-child {
     margin-bottom: 0;
 }
 /* Navigation */
+.active {
+    color: #212870;
+}
 li {
     position: relative;
     top: 36px;
     margin-left: 0;
-    display: inline;
+    float: left;
+    border-left: 2px solid #431757;
 }
 
-li:nth-child(2) {
-    border-left: 2px solid #431757;
-    border-right: 2px solid #431757;
+li:first-child {
+    border: 0;
+}
+/* Disapearing nav border */
+li:hover + li {
+    border-left: 2px solid #ffffff;
+}
+li:hover {
+    border-left: 2px solid #ffffff;
 }
 
 nav {
@@ -91,17 +111,10 @@ nav a:hover {
     background: #212870;
     color: #ffffff;
     animation: ease;
+    margin: 0;
 }
 
-.container {
-    clear: both;
-    width: 960px;
-    margin: 40px auto;
-    padding: 30px;
-    background: #ffffff;
-    color: #666666;
-    border: 1px solid #cccccc;
-}
+
 /* Header */
 header {
     background: #ffffff;
